@@ -3,17 +3,24 @@
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://shields.io" alt="CSS Layouts">
+  <img src="https://img.shields.io/badge/CSS_Grid-6C63FF?logo=css3&logoColor=white" alt="CSS Grid">
+  <img src="https://img.shields.io/badge/Flexbox-6C63FF?logo=css3&logoColor=white" alt="Flexbox">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
 </p>
+
+## 🌐 Demonstração Online
+
+Acede à versão publicada do projeto através do Vercel:
+
+**[🚀 Visualizar Medicenter Online](https://projeto-medicenter-zeta.vercel.app/)**
 
 ## 📌 Sobre o Projeto
 
 O **Medicenter** é um projeto de interface institucional desenvolvido para representar um portal destinado a clínicas, hospitais e organizações da área da saúde.
 
-O projeto foi estruturado com base nos exercícios práticos da **B7Web**, recebendo uma refatoração completa com foco em boas práticas modernas de arquitetura front-end, garantindo uma navegação limpa, áreas de notícias dinâmicas e blocos informativos robustos.
+Baseado nos exercícios práticos da **B7Web**, o projeto foi desenvolvido com foco na organização do código, na apresentação de informações institucionais, na estruturação de áreas de notícias e na criação de uma experiência de navegação responsiva.
 
-O principal objetivo deste repositório é demonstrar o uso avançado de **HTML5 semântico, CSS3 (com arquitetura de Variáveis Nativas), layouts responsivos híbridos (Flexbox + Grid) e JavaScript Vanilla** orientado a eventos e acessibilidade.
+O principal objetivo deste repositório é demonstrar a aplicação de **HTML5 semântico, CSS3, variáveis nativas, Flexbox, CSS Grid e JavaScript Vanilla**, explorando a construção de interfaces adaptáveis, a manipulação do DOM e a implementação de elementos interativos.
 
 > **Nota:** Este projeto tem finalidade exclusivamente educacional e não representa uma plataforma médica real nem fornece serviços de saúde.
 
@@ -21,51 +28,56 @@ O principal objetivo deste repositório é demonstrar o uso avançado de **HTML5
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
 
-### 🧱 HTML5 Semântico & Acessibilidade
+### 🧱 HTML5 Semântico e Acessibilidade
 
-A estrutura foi desenhada utilizando tags semânticas estritas para otimizar a legibilidade do código e o SEO estrutural:
+A estrutura utiliza elementos semânticos para organizar o conteúdo, melhorar a legibilidade do código e contribuir para a compreensão da página pelos motores de pesquisa e pelas tecnologias de apoio.
 
-- `<header>` e `<nav>` gerenciando o fluxo de navegação institucional;
-- `<main>` delimitando o núcleo de dados da página;
-- `<article>` encapsulando cada publicação da área de notícias de forma independente;
-- `<aside>` organizando componentes complementares (como o bloco de departamentos e chamadas para ação);
-- `<footer>` estruturando o fechamento institucional e dados cadastrais.
+- **`<header>` e `<nav>`:** estruturação do cabeçalho e da navegação institucional.
+- **`<main>`:** delimitação do conteúdo principal da página.
+- **`<article>`:** organização de publicações independentes na área de notícias.
+- **`<aside>`:** apresentação de conteúdos complementares, como departamentos e chamadas para ação.
+- **`<footer>`:** organização das informações institucionais e dos contactos.
 
-### 📐 Sistema de Layout Híbrido (Flexbox + CSS Grid)
+### 📐 Sistema de Layout Híbrido — Flexbox e CSS Grid
 
-A distribuição espacial dos elementos foi atualizada para extrair o melhor de dois mundos:
+A interface combina diferentes sistemas de layout para organizar os elementos de forma consistente e adaptável.
 
-- **CSS Grid:** Aplicado na área de notícias (`.flex`) e departamentos para renderizar colunas matemáticas exatas e dinâmicas, eliminando cálculos manuais de margem.
-- **Flexbox:** Utilizado no alinhamento de componentes unidimensionais, como a centralização de itens do cabeçalho, distribuição dos blocos do banner principal e organização interna do rodapé.
-- **CSS Variables (:root):** Centralização de toda a paleta de cores e limites de largura em variáveis globais, simplificando manutenções futuras.
+- **CSS Grid:** organização das notícias e dos departamentos em colunas, com controlo do espaçamento e da distribuição dos elementos.
+- **Flexbox:** criação de layouts flexíveis para o cabeçalho, os elementos do banner, os componentes de contacto e o rodapé.
+- **CSS Variables (`:root`):** centralização de cores e outros valores reutilizáveis, facilitando a manutenção e a consistência visual.
+- **Media Queries:** adaptação da estrutura, das dimensões e da disposição dos elementos a diferentes tamanhos de ecrã.
 
-### 📱 Design Responsivo Multi-Breakpoint (320px a 1024px)
+### 📱 Design Responsivo Multibreakpoint
 
-Diferente de layouts baseados em apenas um ponto de quebra, a responsividade deste projeto foi refatorada e testada cirurgicamente sob três cenários críticos de visualização:
+A interface foi estruturada para adaptar a apresentação do conteúdo a diferentes resoluções, com especial atenção à legibilidade e à navegação em dispositivos móveis.
 
-- **Desktop & Laptops (Acima de 1024px):** Layout amplo em proporção `flex: 2` para conteúdo e `flex: 1` para barra lateral.
-- **Tablets (Breakpoint 900px / Foco em 768px):** Transição inteligente onde a barra lateral é empilhada verticalmente abaixo das notícias para evitar o esmagamento de texto. O bloco de notícias reorganiza-se automaticamente em **2 colunas perfeitas**.
-- **Smartphones Ultra-Pequenos (Breakpoint 360px / Foco em 320px):** Proteção especial para telas estilo iPhone SE. Os componentes de contato convertem suas larguras rígidas para preenchimento fluído (`height: auto`), impedindo o surgimento de barras de rolagem horizontal.
+- **Desktop e portáteis:** apresentação horizontal do conteúdo principal e da barra lateral.
+- **Tablets:** reorganização das áreas de conteúdo, com empilhamento da barra lateral e distribuição das notícias em duas colunas.
+- **Smartphones:** adaptação para uma coluna, com aproveitamento do espaço disponível e imagens ajustadas ao contentor.
+- **Ecrãs pequenos:** ajustes nas dimensões e nos elementos de contacto para reduzir o risco de rolagem horizontal.
 
-### ⚙️ JavaScript & Manipulação Dinâmica do DOM
+### ⚙️ JavaScript e Manipulação Dinâmica do DOM
 
-O comportamento do menu mobile foi blindado contra falhas comuns de renderização:
+O JavaScript é utilizado para implementar o comportamento interativo do menu de navegação em dispositivos móveis.
 
-- **Garantia de Ciclo de Vida:** O código é disparado via `DOMContentLoaded`, permitindo a interação instantânea antes mesmo do carregamento total de imagens pesadas.
-- **Controle de Estado de Acessibilidade:** O clique gerencia os atributos `aria-expanded` dinamicamente entre `true` e `false`.
-- **Efeito Anti-Quebra no Redimensionamento:** Inclui um observador do evento `resize` da janela do navegador que limpa automaticamente as classes móveis se o usuário expandir a tela de um smartphone diretamente para o Desktop.
+- **`DOMContentLoaded`:** inicialização da lógica de interação após a análise do documento HTML.
+- **Estado de acessibilidade:** atualização do atributo `aria-expanded` de acordo com o estado do menu.
+- **Menu hambúrguer animado:** transformação visual do botão de navegação através de transições CSS.
+- **Redimensionamento da janela:** tratamento da mudança entre os modos de navegação móvel e desktop.
 
 ---
 
 ## 📐 Estrutura Avançada da Interface
 
-### 🏥 Hero / Área de Destaque Animada
+### 🏥 Hero — Área de Destaque
 
-O banner principal utiliza o conceito de posicionamento centralizado combinado com opções de ações imediatas. O botão expansível do menu mobile recebeu estilos nativos que **transformam as 3 linhas clássicas num "X" animado via CSS Transitions** assim que o menu é ativado.
+A área principal de destaque apresenta a identidade visual do portal e organiza as chamadas para ação, facilitando o acesso às principais secções da interface.
+
+O botão do menu móvel utiliza transições CSS para transformar as três linhas do ícone num símbolo de fecho quando a navegação está ativa.
 
 ### 📰 Grid de Notícias Adaptável
 
-As publicações se reorganizam de forma totalmente responsiva:
+A área de notícias utiliza CSS Grid para distribuir os conteúdos em colunas, com espaçamento consistente entre os elementos.
 
 ```css
 .flex {
@@ -73,23 +85,28 @@ As publicações se reorganizam de forma totalmente responsiva:
    grid-template-columns: repeat(2, 1fr);
    gap: 20px;
 }
-/* No mobile o grid colapsa para apenas uma coluna (1fr) de forma fluida */
+
+/* Em ecrãs pequenos, o conteúdo passa para uma coluna. */
 ```
 
-### 📅 Atendimento e Canais de Contato
+A quantidade de colunas é ajustada através de media queries, permitindo adaptar a apresentação ao espaço disponível.
 
-Estrutura adaptada com herança de fontes controlada para links telefônicos (`mailto:` e `tel:`), oferecendo uma experiência de usabilidade real ao usuário final em dispositivos móveis.
+### 📅 Atendimento e Canais de Contacto
+
+A interface organiza os horários de atendimento e os canais de contacto em blocos informativos de fácil leitura.
+
+Os links com os protocolos `mailto:` e `tel:` permitem iniciar, respetivamente, uma ação de envio de e-mail ou de chamada telefónica através das aplicações compatíveis do dispositivo.
 
 ---
 
-## 📱 Tabela de Comportamento Responsivo
+## 📱 Comportamento Responsivo
 
-| Dispositivo           | Breakpoint Alvo   | Comportamento do Layout                           | Navegação de Cima              |
-| :-------------------- | :---------------- | :------------------------------------------------ | :----------------------------- |
-| 🖥️ **Desktop**        | Superior a 1025px | Multi-colunas horizontais completas               | Horizontal Estendida           |
-| 💻 **Tablet**         | 768px a 900px     | Empilhamento de Blocos + Notícias em 2 Colunas    | Compacta / Ativação Antecipada |
-| 📱 **Mobile Normal**  | Até 720px         | Coluna única vertical, imagens em tamanho total   | Menu Hambúrguer Oculto         |
-| 📟 **Mobile Pequeno** | Até 320px         | Fontes reduzidas, contatos adaptáveis sem quebras | Menu Hambúrguer Oculto         |
+| Dispositivo           | Intervalo de referência       | Comportamento do layout                                           |
+| :-------------------- | :---------------------------- | :---------------------------------------------------------------- |
+| 🖥️ **Desktop**        | Acima de 1024px               | Conteúdo principal e barra lateral apresentados horizontalmente.  |
+| 💻 **Tablet**         | Aproximadamente 768px a 900px | Reorganização dos blocos e notícias distribuídas em duas colunas. |
+| 📱 **Smartphone**     | Até 720px                     | Conteúdo organizado numa coluna e navegação móvel.                |
+| 📟 **Ecrãs pequenos** | Até 360px                     | Ajustes adicionais de dimensões e espaçamentos.                   |
 
 ---
 
@@ -101,32 +118,33 @@ Estrutura adaptada com herança de fontes controlada para links telefônicos (`m
 git clone https://github.com/SEU-USUARIO/projeto-medicenter.git
 ```
 
-### 2. Aceder ao diretório do projeto
+### 2. Aceder ao diretório
 
 ```bash
 cd projeto-medicenter
 ```
 
-### 3. Execução
+### 3. Executar a aplicação
 
-Por tratar-se de uma aplicação estática construída com JavaScript puro, basta abrir o arquivo `index.html` diretamente em qualquer navegador moderno.
+Por se tratar de uma aplicação estática desenvolvida com HTML, CSS e JavaScript, basta abrir o ficheiro `index.html` num navegador moderno.
 
-_Dica de Desenvolvimento:_ Recomenda-se o uso da extensão **Live Server** no VS Code para refletir alterações em tempo real durante os testes de responsividade.
+Para uma experiência de desenvolvimento mais prática, recomenda-se a utilização da extensão **Live Server** no Visual Studio Code, permitindo visualizar as alterações durante a edição dos ficheiros.
 
 ---
 
-## 📂 Estrutura Estrutural do Repositório
+## 📂 Estrutura do Projeto
 
 ```text
 projeto-medicenter/
 │
-├── index.html          # Estrutura semântica e lógica JS unificada/corrigida
+├── index.html
 ├── assets/
 │   ├── css/
-│   │   └── style.css   # Estilização com variáveis CSS, Grid, Flexbox e queries
+│   │   └── style.css
 │   └── images/
-│       └── ...         # Assets visuais do template
-└── README.md           # Documentação técnica do projeto
+│       └── ...
+│
+└── README.md
 ```
 
 ---
@@ -135,26 +153,10 @@ projeto-medicenter/
 
 Desenvolvido por **Rafael Santana** 🚀
 
-**Estudante de Engenharia da Computação**, focado no desenvolvimento Front-end de alta performance, arquitetura CSS limpa, semântica e interfaces modernas e inclusivas para a web.
+**Estudante de Engenharia da Computação**, com foco no desenvolvimento Full-Stack, na criação de interfaces responsivas, na organização de código e na construção de aplicações web modernas.
 
 ---
 
 <p align="center">
-  Projeto desenvolvido para fins educacionais e para consolidação avançada de layouts híbridos e manipulação nativa do DOM.
-</p>    └── ...         # Assets visuais do template
-└── README.md           # Documentação técnica do projeto
-```
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Rafael Santana** 🚀
-
-**Estudante de Engenharia da Computação**, focado no desenvolvimento Front-end de alta performance, arquitetura CSS limpa, semântica e interfaces modernas e inclusivas para a web.
-
----
-
-<p align="center">
-  Projeto desenvolvido para fins educacionais e para consolidação avançada de layouts híbridos e manipulação nativa do DOM.
+  Projeto desenvolvido para fins educacionais e para consolidação de conhecimentos em HTML5, CSS3, CSS Grid, Flexbox e desenvolvimento de interfaces responsivas.
 </p>
